@@ -1,0 +1,106 @@
+# Naura Meets Landing Page
+
+## О проекте
+Это лендинг для Naura Meets — сервиса регулярных встреч 1-на-1 внутри сообществ.
+Лендинг на русском языке, целевая аудитория — участники сообществ и владельцы комьюнити.
+
+## Технологии
+- React + TypeScript + Vite
+- Tailwind CSS для стилей
+- shadcn/ui компоненты (Button, Card, Input, etc.)
+- Деплой на Vercel (автоматически при push в main)
+
+## Структура
+```
+src/
+├── components/
+│   ├── Landing.tsx      ← ГЛАВНЫЙ ФАЙЛ лендинга, все секции тут
+│   └── ui/              ← UI компоненты (не трогать без необходимости)
+├── config.ts            ← Настройки: ссылки, email, Telegram
+├── main.tsx             ← Точка входа
+└── index.css            ← Глобальные стили, CSS переменные
+public/
+├── naura-logo.svg       ← Логотип
+├── placeholder.svg      ← Заглушка для изображений
+└── favicon.svg
+```
+
+## Основной файл: src/components/Landing.tsx
+
+Структура лендинга (секции сверху вниз):
+1. **Header** — фиксированная шапка с навигацией
+2. **Hero** — главный экран с заголовком и CTA
+3. **Блок 1** — "Как устроены встречи" (3 карточки)
+4. **Блок 2** — "Зачем встречаться?" (4 карточки)
+5. **Блок 3** — "Как проходит неделя" (таймлайн из 4 шагов)
+6. **Блок 4** — B2B секция для владельцев сообществ + форма заявки
+7. **Блок 5** — Тарифы (сейчас скрыт, showPricing = false)
+8. **Блок 6** — FAQ (разделён на "Для участников" и "Для владельцев")
+9. **Footer** — подвал с навигацией и контактами
+
+## Конфигурация (src/config.ts)
+- `CONFIG.APP_URL` — ссылка на основное приложение
+- `CONFIG.START_MEETINGS_URL` — ссылка на начало встреч (кнопка "Начать")
+- `CONFIG.TELEGRAM_MANAGER` — Telegram менеджера (@naura_meet_manager)
+- `CONFIG.SUPPORT_EMAIL` — email поддержки
+- `CONFIG.LEGAL` — ссылки на политику и оферту
+
+## Правила работы
+
+### Стили
+- Используй Tailwind классы
+- Мобильные стили: базовые классы, десктоп через `sm:`, `md:`, `lg:`
+- Основной цвет: `primary` (фиолетовый)
+- Текст: `foreground`, приглушённый: `muted-foreground`
+
+### Компоненты
+- Кнопки: `<Button>`, `<Button variant="outline">`, `<Button variant="ghost">`
+- Карточки: `<Card>`, `<CardHeader>`, `<CardContent>`, `<CardTitle>`, `<CardDescription>`
+- Формы: `<Input>`, `<Textarea>`, `<Label>`
+
+### Иконки
+Используем lucide-react:
+```tsx
+import { ArrowRight, Users, Clock } from "lucide-react";
+```
+
+## Git workflow
+Перед началом работы:
+```bash
+git pull
+```
+
+После изменений:
+```bash
+git add .
+git commit -m "описание изменений"
+git push
+```
+
+## Локальный запуск
+```bash
+npm run dev
+```
+Откроется на http://localhost:5173
+
+## Продакшн
+https://naura-landing.vercel.app
+(автодеплой после push в main, ~1 минута)
+
+## Частые задачи
+
+### Изменить текст
+Открой `src/components/Landing.tsx`, найди нужную секцию, измени текст.
+
+### Добавить/убрать секцию
+Секции — это `<section>` блоки в Landing.tsx. Можно комментировать или удалять.
+
+### Изменить ссылки/контакты
+Редактируй `src/config.ts`
+
+### Добавить изображение
+1. Положи файл в `public/`
+2. Используй как `<img src="/имя-файла.png" />`
+
+### Скрыть/показать тарифы
+В Landing.tsx измени `const showPricing = false;` на `true`
