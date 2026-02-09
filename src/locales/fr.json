@@ -1,0 +1,111 @@
+{
+    "header": {
+        "for_participants": "Pour les Participants",
+        "for_communities": "Pour les Communautés",
+        "pricing": "Tarifs",
+        "soon": "Bientôt",
+        "login": "Connexion",
+        "start": "Commencer"
+    },
+    "hero": {
+        "title_part1": "Rencontres fortuites avec",
+        "title_part2": "des personnes non fortuites",
+        "subtitle": "<strong>Naura Meets</strong> — un service pour des rencontres au sein de communautés et par intérêts.<br />Élargissez votre cercle, trouvez vos pairs, obtenez de nouvelles idées grâce à des rencontres régulières avec des personnes intéressantes.",
+        "cta_button": "Commencer les Rencontres",
+        "cta_community": "Connecter pour la Communauté →"
+    },
+    "how_it_works": {
+        "title": "Comment fonctionnent les rencontres",
+        "description": "Naura meets est un format de rencontres régulières avec de nouvelles personnes.<br />Chaque semaine, vous décidez de participer ou de passer. Si vous participez, nous vous trouvons un partenaire et fournissons un contexte pour que la conversation ne parte pas de zéro.",
+        "card_context_title": "Contexte avant la rencontre",
+        "card_context_desc": "Vous voyez le profil de l'interlocuteur : ce qu'il fait, ce qu'il cherche, comment il peut aider",
+        "card_rhythm_title": "Rythme sans pression",
+        "card_rhythm_desc": "Participez quand cela vous convient — passez un tour si vous n'êtes pas prêt",
+        "card_protection_title": "Protection contre les rencontres vides",
+        "card_protection_desc": "Si vous n'avez pas pris contact, nous trouvons un nouveau partenaire. Après la rencontre — feedback que nous prenons en compte la prochaine fois"
+    },
+    "why_meet": {
+        "title": "Pourquoi se rencontrer ?",
+        "card1_title": "Sortir de son cercle",
+        "card1_desc": "Rencontrez des gens que vous ne croiseriez pas habituellement",
+        "card2_title": "Voir comment d'autres résolvent des tâches similaires",
+        "card2_desc": "Échangez des expériences avec ceux qui traversent la même chose",
+        "card3_title": "Trouver vos pairs dans un nouvel environnement",
+        "card3_desc": "Rencontrez des personnes de domaines adjacents ou ayant des intérêts similaires",
+        "card4_title": "Des conversations qui changent quelque chose",
+        "card4_desc": "Obtenez une nouvelle perspective, des idées et des contacts qui restent après la rencontre"
+    },
+    "week_flow": {
+        "title": "Comment se déroule la semaine",
+        "step1_title": "Samedi : décidez",
+        "step1_desc": "Recevez une invitation au tour — participez ou passez",
+        "step2_title": "Lundi : rencontrez",
+        "step2_desc": "Voyez le profil du partenaire, écrivez sur Telegram, convenez d'une rencontre",
+        "step3_title": "Mercredi : si nécessaire — changeons",
+        "step3_desc": "Pas pu prendre contact ? Nous trouverons un nouveau partenaire pour cette semaine",
+        "step4_title": "Samedi : partagez l'expérience",
+        "step4_desc": "Indiquez si la rencontre a eu lieu, évaluez-la — nous en tenons compte pour les prochains tours",
+        "cta_button": "Essayer"
+    },
+    "for_communities": {
+        "title": "Naura Meets pour votre communauté",
+        "description": "Les participants font connaissance, les nouveaux s'intègrent plus vite, l'activité croît avec la valeur de la communauté — sans votre participation.",
+        "problem_title": "Problème",
+        "problem_desc": "Les participants viennent aux événements mais ne se connaissent pas. Les nouveaux se perdent. Silence entre les rencontres. Tout cela mange l'engagement, et la communauté reste formelle.",
+        "solution_title": "Solution",
+        "solution_desc": "Naura Meets lance des rencontres régulières en 1-à-1 au sein de votre communauté.<br />Les gens font connaissance eux-mêmes, vous obtenez un outil qui fonctionne en pilote automatique.",
+        "benefit1_title": "Engagement en pilote automatique",
+        "benefit1_desc": "Matching, notifications, contrôle des rencontres — tout fonctionne sans vous",
+        "benefit2_title": "Image claire de l'activité",
+        "benefit2_desc": "Voyez qui participe, combien de rencontres ont eu lieu, quel feedback",
+        "benefit3_title": "Configuration pour la communauté",
+        "benefit3_desc": "Format des rencontres (en ligne/hors ligne), fréquence des tours, accès par groupes",
+        "form_title": "Soumettre une demande",
+        "form_desc": "Remplissez le formulaire — nous répondrons et aiderons à connecter les rencontres pour votre communauté.",
+        "label_name": "Nom",
+        "placeholder_name": "Comment s'adresser à vous",
+        "label_community": "Communauté",
+        "placeholder_community": "Nom / Lien",
+        "label_contact": "Contact",
+        "placeholder_contact": "Telegram / email / téléphone",
+        "label_comment": "Commentaire",
+        "placeholder_comment": "Racontez brièvement le format et le public",
+        "submit_button": "Soumettre une demande"
+    },
+    "pricing": {
+        "title": "Tarifs",
+        "for_participants_title": "Pour les Participants",
+        "for_participants_item1": "Participation à la base générale Naura — gratuit",
+        "for_participants_item2": "Rencontres au sein des communautés — dépend des paramètres de la communauté",
+        "for_communities_title": "Pour les Communautés",
+        "for_communities_item1": "Le coût dépend de la taille",
+        "for_communities_item2": "Premier tour — gratuit",
+        "discuss_terms": "Discuter des conditions →"
+    },
+    "faq": {
+        "title": "FAQ",
+        "participants_title": "Pour les Participants",
+        "p_q1": "Et si le partenaire ne me convient pas ?",
+        "p_a1": "Si vous n'avez pas pris contact avant mercredi — nous trouvons un nouveau partenaire. Après la rencontre — laissez un feedback, nous en tiendrons compte la prochaine fois.",
+        "p_q2": "Puis-je choisir avec qui me rencontrer ?",
+        "p_a2": "Non, la magie de Meets est dans le hasard ! En même temps, nous tenons compte du contexte du profil (sphère, intérêts, objectifs) pour sélectionner les interlocuteurs les plus intéressants.",
+        "p_q3": "À quelle fréquence dois-je participer ?",
+        "p_a3": "Chaque semaine, vous recevez une invitation — décidez vous-même. Passez un tour — rien ne se passe, revenez quand cela vous convient.",
+        "owners_title": "Pour les Propriétaires",
+        "b_q1": "Combien de temps prend le lancement ?",
+        "b_a1": "Configuration — 10 minutes. Ensuite, tout fonctionne automatiquement.",
+        "b_q2": "Puis-je limiter les participants ?",
+        "b_a2": "Oui, configurez l'accès par groupes, le format des rencontres, la fréquence des tours.",
+        "b_q3": "Que se passe-t-il si les participants ne se rencontrent pas ?",
+        "b_a3": "Nous surveillons cela : check-in en milieu de semaine, possibilité de remplacer le partenaire, feedback après le tour. Vous voyez les statistiques."
+    },
+    "footer": {
+        "subtitle": "Service de rencontres régulières en 1-à-1",
+        "nav_title": "Navigation",
+        "contacts_title": "Contacts",
+        "socials_title": "Réseaux sociaux",
+        "docs_title": "Documents",
+        "privacy_policy": "Politique de confidentialité",
+        "terms": "Offre"
+    }
+}

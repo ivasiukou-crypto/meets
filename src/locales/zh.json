@@ -1,0 +1,111 @@
+{
+    "header": {
+        "for_participants": "对于加入者",
+        "for_communities": "对于社区",
+        "pricing": "价格",
+        "soon": "即将推出",
+        "login": "登录",
+        "start": "开始"
+    },
+    "hero": {
+        "title_part1": "与非随机的人进行",
+        "title_part2": "随机通过",
+        "subtitle": "<strong>Naura Meets</strong> — 社区内部及基于兴趣的会面服务。<br />通过与有趣的人定期会面，扩展你的社交圈，找到志同道合的人，获得新想法。",
+        "cta_button": "开始会面",
+        "cta_community": "为社区连接 →"
+    },
+    "how_it_works": {
+        "title": "会面如何运作",
+        "description": "Naura meets 是一种与新人定期会面的形式。<br />每周你决定是否参与或跳过。如果你参与，我们会为你匹配并提供背景信息，这样对话就不会从零开始。",
+        "card_context_title": "会面前的背景",
+        "card_context_desc": "查看对方的资料：做什么工作，寻找什么，能提供什么帮助",
+        "card_rhythm_title": "无压力的节奏",
+        "card_rhythm_desc": "方便时参与 — 如果没准备好可以跳过一轮",
+        "card_protection_title": "防止无效会面",
+        "card_protection_desc": "如果没联系上，我们会寻找新搭档。会面后 — 提供反馈，我们在下次会面时会考虑"
+    },
+    "why_meet": {
+        "title": "为什么要会面？",
+        "card1_title": "走出你的圈子",
+        "card1_desc": "认识通常不会遇到的人",
+        "card2_title": "看看别人如何解决类似任务",
+        "card2_desc": "与经历相同事情的人交流经验",
+        "card3_title": "在新环境中找到志同道合的人",
+        "card3_desc": "认识相邻领域或有相似兴趣的人",
+        "card4_title": "改变某些事情的对话",
+        "card4_desc": "获得新的视角、想法和会面后留下的联系人"
+    },
+    "week_flow": {
+        "title": "一周流程",
+        "step1_title": "周六：决定",
+        "step1_desc": "收到本轮邀请 — 参与或跳过",
+        "step2_title": "周一：认识",
+        "step2_desc": "查看搭档资料，在 Telegram 上联系，安排会面",
+        "step3_title": "周三：如有需要 — 更换",
+        "step3_desc": "没联系上？我们会为本周寻找新搭档",
+        "step4_title": "周六：分享经验",
+        "step4_desc": "标记会面是否发生，评价 — 我们在未来几轮中会考虑",
+        "cta_button": "尝试"
+    },
+    "for_communities": {
+        "title": "为您的社区提供的 Naura Meets",
+        "description": "参与者相互认识，新人更快融入，活跃度随社区价值增长 — 无需您的参与。",
+        "problem_title": "问题",
+        "problem_desc": "参与者参加活动但不认识彼此。新人迷失。会面之间的沉默。所有这些都吞噬了参与度，社区仍然形式化。",
+        "solution_title": "解决方案",
+        "solution_desc": "Naura Meets 在您的社区内启动定期的 1 对 1 会面。<br />人们自己认识，您获得一个自动运行的工具。",
+        "benefit1_title": "自动参与",
+        "benefit1_desc": "匹配、通知、会面控制 — 一切都在没有您的情况下运行",
+        "benefit2_title": "清晰的活动图景",
+        "benefit2_desc": "查看谁参与，发生了多少次会面，什么反馈",
+        "benefit3_title": "社区定制",
+        "benefit3_desc": "会面形式（线上/线下），轮次频率，分组访问",
+        "form_title": "提交申请",
+        "form_desc": "填写表格 — 我们将回复并帮助为您的社区连接会面。",
+        "label_name": "姓名",
+        "placeholder_name": "如何称呼您",
+        "label_community": "社区",
+        "placeholder_community": "名称 / 链接",
+        "label_contact": "联系方式",
+        "placeholder_contact": "Telegram / 邮箱 / 电话",
+        "label_comment": "评论",
+        "placeholder_comment": "简要介绍形式和受众",
+        "submit_button": "提交申请"
+    },
+    "pricing": {
+        "title": "价格",
+        "for_participants_title": "对于加入者",
+        "for_participants_item1": "参与 Naura 通用库 — 免费",
+        "for_participants_item2": "社区内会面 — 取决于社区设置",
+        "for_communities_title": "对于社区",
+        "for_communities_item1": "费用取决于规模",
+        "for_communities_item2": "第一轮 — 免费",
+        "discuss_terms": "讨论条件 →"
+    },
+    "faq": {
+        "title": "常见问题",
+        "participants_title": "对于加入者",
+        "p_q1": "如果搭档不适合我怎么办？",
+        "p_a1": "如果周三前没联系上 — 我们会寻找新搭档。会面后 — 留下反馈，我们下次会考虑。",
+        "p_q2": "我可以选择与谁会面吗？",
+        "p_a2": "不，Meets 的魔力在于随机性！同时，我们会考虑资料背景（领域、兴趣、目标）以选择最有趣的对话者。",
+        "p_q3": "我需要多久参与一次？",
+        "p_a3": "每周收到邀请 — 自己决定。跳过一轮 — 没关系，方便时再回来。",
+        "owners_title": "对于所有者",
+        "b_q1": "启动需要多长时间？",
+        "b_a1": "设置 — 10 分钟。然后一切自动运行。",
+        "b_q2": "我可以限制参与者吗？",
+        "b_a2": "可以，配置分组访问、会面形式、轮次频率。",
+        "b_q3": "如果参与者不会面怎么办？",
+        "b_a3": "我们会监控这一点：周中签到，更换搭档的可能性，轮次后的反馈。您可以看到统计数据。"
+    },
+    "footer": {
+        "subtitle": "定期 1 对 1 会面服务",
+        "nav_title": "导航",
+        "contacts_title": "联系方式",
+        "socials_title": "社交网络",
+        "docs_title": "文件",
+        "privacy_policy": "隐私政策",
+        "terms": "条款"
+    }
+}

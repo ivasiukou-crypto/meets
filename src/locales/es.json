@@ -1,0 +1,111 @@
+{
+    "header": {
+        "for_participants": "Para Participantes",
+        "for_communities": "Para Comunidades",
+        "pricing": "Precios",
+        "soon": "Pronto",
+        "login": "Entrar",
+        "start": "Empezar"
+    },
+    "hero": {
+        "title_part1": "Encuentros casuales con",
+        "title_part2": "personas nada casuales",
+        "subtitle": "<strong>Naura Meets</strong> — un servicio para reuniones dentro de comunidades y por intereses.<br />Amplía tu círculo, encuentra a los tuyos, obtén nuevas ideas a través de reuniones regulares con personas interesantes.",
+        "cta_button": "Empezar Reuniones",
+        "cta_community": "Conectar para Comunidad →"
+    },
+    "how_it_works": {
+        "title": "Cómo funcionan las reuniones",
+        "description": "Naura meets es un formato de reuniones regulares con gente nueva.<br />Cada semana decides si participar o saltar. Si participas, te emparejamos y damos contexto para que la conversación no empiece de cero.",
+        "card_context_title": "Contexto antes de la reunión",
+        "card_context_desc": "Ves el perfil del interlocutor: a qué se dedica, qué busca, en qué puede ayudar",
+        "card_rhythm_title": "Ritmo sin presión",
+        "card_rhythm_desc": "Participa cuando te venga bien — salta una ronda si no estás listo",
+        "card_protection_title": "Protección contra reuniones vacías",
+        "card_protection_desc": "Si no contactan, buscamos una nueva pareja. Después de la reunión — feedback que tenemos en cuenta la próxima vez"
+    },
+    "why_meet": {
+        "title": "¿Por qué reunirse?",
+        "card1_title": "Salir de tu círculo",
+        "card1_desc": "Conoce gente con la que normalmente no te cruzarías",
+        "card2_title": "Ver cómo otros resuelven tareas similares",
+        "card2_desc": "Intercambia experiencias con quienes pasan por lo mismo",
+        "card3_title": "Encontrar a los tuyos en un nuevo entorno",
+        "card3_desc": "Encuentra personas de campos adyacentes o con intereses similares",
+        "card4_title": "Conversaciones que cambian algo",
+        "card4_desc": "Obtén una nueva perspectiva, ideas y contactos que permanecen después de la reunión"
+    },
+    "week_flow": {
+        "title": "Cómo transcurre la semana",
+        "step1_title": "Sábado: decides",
+        "step1_desc": "Recibes una invitación a la ronda — participas o saltas",
+        "step2_title": "Lunes: conoces",
+        "step2_desc": "Ves el perfil del interlocutor, escribes en Telegram, acuerdas una reunión",
+        "step3_title": "Miércoles: si es necesario — cambiamos",
+        "step3_desc": "¿No pudiste contactar? Buscaremos una nueva pareja para esta semana",
+        "step4_title": "Sábado: compartes experiencia",
+        "step4_desc": "Marcas si la reunión tuvo lugar, la valoras — lo tenemos en cuenta en futuras rondas",
+        "cta_button": "Probar"
+    },
+    "for_communities": {
+        "title": "Naura Meets para tu comunidad",
+        "description": "Los participantes se conocen, los nuevos se integran más rápido, la actividad crece junto con el valor de la comunidad — sin tu participación.",
+        "problem_title": "Problema",
+        "problem_desc": "Los participantes vienen a eventos pero no se conocen. Los nuevos se pierden. Silencio entre reuniones. Todo esto consume el compromiso, y la comunidad permanece formal.",
+        "solution_title": "Solución",
+        "solution_desc": "Naura Meets lanza reuniones regulares 1 a 1 dentro de tu comunidad.<br />La gente se conoce sola, tú obtienes una herramienta que funciona en piloto automático.",
+        "benefit1_title": "Compromiso en piloto automático",
+        "benefit1_desc": "Emparejamiento, notificaciones, control de reuniones — todo funciona sin ti",
+        "benefit2_title": "Cuadro claro de actividad",
+        "benefit2_desc": "Ves quién participa, cuántas reuniones tuvieron lugar, qué feedback",
+        "benefit3_title": "Configuración para la comunidad",
+        "benefit3_desc": "Formato de reuniones (online/offline), frecuencia de rondas, acceso por grupos",
+        "form_title": "Enviar solicitud",
+        "form_desc": "Rellena el formulario — responderemos y ayudaremos a conectar reuniones para tu comunidad.",
+        "label_name": "Nombre",
+        "placeholder_name": "Cómo dirigirnos a ti",
+        "label_community": "Comunidad",
+        "placeholder_community": "Nombre / Enlace",
+        "label_contact": "Contacto",
+        "placeholder_contact": "Telegram / email / teléfono",
+        "label_comment": "Comentario",
+        "placeholder_comment": "Cuéntanos brevemente sobre el formato y la audiencia",
+        "submit_button": "Enviar solicitud"
+    },
+    "pricing": {
+        "title": "Precios",
+        "for_participants_title": "Para Participantes",
+        "for_participants_item1": "Participación en la base general de Naura — gratis",
+        "for_participants_item2": "Reuniones dentro de comunidades — depende de la configuración de la comunidad",
+        "for_communities_title": "Para Comunidades",
+        "for_communities_item1": "El costo depende del tamaño",
+        "for_communities_item2": "Primera ronda — gratis",
+        "discuss_terms": "Discutir condiciones →"
+    },
+    "faq": {
+        "title": "Preguntas frecuentes",
+        "participants_title": "Para Participantes",
+        "p_q1": "¿Qué pasa si no me convence el interlocutor?",
+        "p_a1": "Si no han contactado para el miércoles — buscamos una nueva pareja. Después de la reunión — dejas feedback, lo tendremos en cuenta la próxima vez.",
+        "p_q2": "¿Puedo elegir con quién reunirme?",
+        "p_a2": "¡No, la magia de Meets está en la aleatoriedad! Al mismo tiempo, tenemos en cuenta el contexto del perfil (esfera, intereses, objetivos) para seleccionar los interlocutores más interesantes.",
+        "p_q3": "¿Con qué frecuencia debo participar?",
+        "p_a3": "Cada semana recibes una invitación — decides tú mismo. Saltas una ronda — no pasa nada, vuelves cuando te venga bien.",
+        "owners_title": "Para Propietarios",
+        "b_q1": "¿Cuánto tiempo lleva el lanzamiento?",
+        "b_a1": "Configuración — 10 minutos. Luego todo funciona automáticamente.",
+        "b_q2": "¿Puedo limitar a los participantes?",
+        "b_a2": "Sí, configuras el acceso por grupos, formato de reuniones, frecuencia de rondas.",
+        "b_q3": "¿Qué pasa si los participantes no se reúnen?",
+        "b_a3": "Hacemos un seguimiento de esto: check-in a mitad de semana, posibilidad de reemplazar pareja, feedback tras la ronda. Tú ves las estadísticas."
+    },
+    "footer": {
+        "subtitle": "Servicio de reuniones regulares 1 a 1",
+        "nav_title": "Navegación",
+        "contacts_title": "Contactos",
+        "socials_title": "Redes sociales",
+        "docs_title": "Documentos",
+        "privacy_policy": "Política de privacidad",
+        "terms": "Oferta"
+    }
+}

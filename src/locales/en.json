@@ -1,0 +1,111 @@
+{
+    "header": {
+        "for_participants": "For Participants",
+        "for_communities": "For Communities",
+        "pricing": "Pricing",
+        "soon": "Soon",
+        "login": "Login",
+        "start": "Start"
+    },
+    "hero": {
+        "title_part1": "Random meetings with",
+        "title_part2": "non-random people",
+        "subtitle": "<strong>Naura Meets</strong> — a service for meetings within communities and by interests.<br />Expand your circle, find your people, get new ideas through regular meetings with interesting people.",
+        "cta_button": "Start Meetings",
+        "cta_community": "Connect for Community →"
+    },
+    "how_it_works": {
+        "title": "How Meetings Work",
+        "description": "Naura meets is a format of regular meetings with new people.<br />Every week you decide whether to participate or skip. If you participate, we match you and provide context so the conversation doesn't start from scratch.",
+        "card_context_title": "Context Before Meeting",
+        "card_context_desc": "See the participant's profile: what they do, what they're looking for, how they can help",
+        "card_rhythm_title": "Rhythm Without Pressure",
+        "card_rhythm_desc": "Participate when convenient — skip a round if you're not ready",
+        "card_protection_title": "Protection from Empty Meetings",
+        "card_protection_desc": "If you don't connect, we'll find a new match. After the meeting — feedback that we take into account next time"
+    },
+    "why_meet": {
+        "title": "Why Meet?",
+        "card1_title": "Go Beyond Your Circle",
+        "card1_desc": "Meet people you wouldn't usually cross paths with",
+        "card2_title": "Learn How Others Solve Similar Tasks",
+        "card2_desc": "Exchange experience with those going through the same thing",
+        "card3_title": "Find Your People in a New Environment",
+        "card3_desc": "Meet people from adjacent fields or with similar interests",
+        "card4_title": "Conversations That Change Something",
+        "card4_desc": "Get a fresh perspective, ideas, and contacts that remain after the meeting"
+    },
+    "week_flow": {
+        "title": "How the Week Goes",
+        "step1_title": "Saturday: Decide",
+        "step1_desc": "Receive an invitation to the round — participate or skip",
+        "step2_title": "Monday: Meet",
+        "step2_desc": "See the match's profile, write on Telegram, arrange a meeting",
+        "step3_title": "Wednesday: Change if Needed",
+        "step3_desc": "Couldn't connect? We'll find a new match for this week",
+        "step4_title": "Saturday: Share Experience",
+        "step4_desc": "Mark if the meeting took place, rate it — we take it into account in future rounds",
+        "cta_button": "Try It"
+    },
+    "for_communities": {
+        "title": "Naura Meets for Your Community",
+        "description": "Participants get to know each other, newcomers integrate faster, activity grows along with community value — without your participation.",
+        "problem_title": "Problem",
+        "problem_desc": "Participants come to events but don't know each other. Newcomers get lost. Silence between meetings. All this eats up engagement, and the community remains formal.",
+        "solution_title": "Solution",
+        "solution_desc": "Naura Meets launches regular 1-on-1 meetings within your community.<br />People meet themselves, you get a tool that works on autopilot.",
+        "benefit1_title": "Engagement on Autopilot",
+        "benefit1_desc": "Matching, notifications, meeting control — everything works without you",
+        "benefit2_title": "Clear Activity Picture",
+        "benefit2_desc": "See who participates, how many meetings took place, what feedback",
+        "benefit3_title": "Customization for Community",
+        "benefit3_desc": "Meeting format (online/offline), round frequency, access by groups",
+        "form_title": "Submit Application",
+        "form_desc": "Fill out the form — we will answer and help connect meetings for your community.",
+        "label_name": "Name",
+        "placeholder_name": "How strictly to address you",
+        "label_community": "Community",
+        "placeholder_community": "Name / Link",
+        "label_contact": "Contact",
+        "placeholder_contact": "Telegram / email / phone",
+        "label_comment": "Comment",
+        "placeholder_comment": "Briefly tell about the format and audience",
+        "submit_button": "Submit Application"
+    },
+    "pricing": {
+        "title": "Pricing",
+        "for_participants_title": "For Participants",
+        "for_participants_item1": "Participation in Naura general base — free",
+        "for_participants_item2": "Meetings within communities — depends on community settings",
+        "for_communities_title": "For Communities",
+        "for_communities_item1": "Cost depends on size",
+        "for_communities_item2": "First round — free",
+        "discuss_terms": "Discuss Terms →"
+    },
+    "faq": {
+        "title": "FAQ",
+        "participants_title": "For Participants",
+        "p_q1": "What if the match doesn't suit me?",
+        "p_a1": "If you haven't connected by Wednesday, we'll find a new match. After the meeting, leave feedback, we'll take it into account next time.",
+        "p_q2": "Can I choose who to meet with?",
+        "p_a2": "No, the magic of Meets is in randomness! At the same time, we take into account the profile context (sphere, interests, goals) to select the most interesting interlocutors.",
+        "p_q3": "How often do I need to participate?",
+        "p_a3": "Every week you receive an invitation — decide for yourself. Skip a round — nothing happens, return when convenient.",
+        "owners_title": "For Owners",
+        "b_q1": "How long does launch take?",
+        "b_a1": "Setup — 10 minutes. Then everything works automatically.",
+        "b_q2": "Can I limit participants?",
+        "b_a2": "Yes, configure access by groups, meeting format, round frequency.",
+        "b_q3": "What if participants don't meet?",
+        "b_a3": "We monitor this: check-in in the middle of the week, possibility of replacing a pair, feedback after the round. You see the statistics."
+    },
+    "footer": {
+        "subtitle": "Regular 1-on-1 meeting service",
+        "nav_title": "Navigation",
+        "contacts_title": "Contacts",
+        "socials_title": "Socials",
+        "docs_title": "Documents",
+        "privacy_policy": "Privacy Policy",
+        "terms": "Terms of Service"
+    }
+}

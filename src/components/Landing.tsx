@@ -1,7 +1,9 @@
 import { useMemo, useState } from "react";
+import { useTranslation, Trans } from "react-i18next"; // Added i18n
+
+import { LanguageSwitcher } from "@/components/LanguageSwitcher"; // Added Switcher
 
 import { CONFIG, buildTelegramLink, buildMailtoLink } from "@/config";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -26,6 +28,7 @@ import {
 type FaqItem = { id: string; question: string; answer: string };
 
 export const Landing = () => {
+  const { t } = useTranslation();
   const showPricing = false;
 
   const startMeetingsHref = CONFIG.START_MEETINGS_URL || `${CONFIG.APP_URL}/quiz`;
@@ -46,46 +49,42 @@ export const Landing = () => {
     () => [
       {
         id: "p-1",
-        question: "Что если мне не подойдёт собеседник?",
-        answer:
-          "Если не связались до среды — подберём новую пару. После встречи — оставишь фидбек, учтём в следующий раз.",
+        question: t("faq.p_q1"),
+        answer: t("faq.p_a1"),
       },
       {
         id: "p-2",
-        question: "Можно выбрать, с кем встречаться?",
-        answer:
-          "Нет, магия Meets в случайности! При этом мы учитываем контекст анкеты (сфера, интересы, цели), чтобы подбирать самых интересных собеседников.",
+        question: t("faq.p_q2"),
+        answer: t("faq.p_a2"),
       },
       {
         id: "p-3",
-        question: "Как часто нужно участвовать?",
-        answer:
-          "Каждую неделю получаешь приглашение — решаешь сам. Пропускаешь раунд — ничего не происходит, вернёшься когда удобно.",
+        question: t("faq.p_q3"),
+        answer: t("faq.p_a3"),
       },
     ],
-    []
+    [t]
   );
 
   const faqOwners: FaqItem[] = useMemo(
     () => [
       {
         id: "b-1",
-        question: "Сколько времени занимает запуск?",
-        answer: "Настройка — 10 минут. Дальше всё работает автоматически.",
+        question: t("faq.b_q1"),
+        answer: t("faq.b_a1"),
       },
       {
         id: "b-2",
-        question: "Можно ограничить участников?",
-        answer: "Да, настраиваешь доступ по группам, формат встреч, частоту раундов.",
+        question: t("faq.b_q2"),
+        answer: t("faq.b_a2"),
       },
       {
         id: "b-3",
-        question: "Что если участники не будут встречаться?",
-        answer:
-          "Мы следим за этим: чек-ин в середине недели, возможность замены пары, фидбек после раунда. Ты видишь статистику.",
+        question: t("faq.b_q3"),
+        answer: t("faq.b_a3"),
       },
     ],
-    []
+    [t]
   );
 
   const toggleFaq = (id: string) => setOpenFaqId((prev) => (prev === id ? null : id));
@@ -126,32 +125,33 @@ export const Landing = () => {
           <div className="hidden md:flex items-center gap-8">
             <nav className="flex items-center gap-6 text-sm font-medium">
               <a href="#for-participants" className="text-muted-foreground hover:text-foreground transition-colors">
-                Для участников
+                {t("header.for_participants")}
               </a>
               <a href="#for-communities" className="text-muted-foreground hover:text-foreground transition-colors">
-                Для сообществ
+                {t("header.for_communities")}
               </a>
               {showPricing ? (
                 <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Тарифы
+                  {t("header.pricing")}
                 </a>
               ) : (
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <span className="text-muted-foreground/50 cursor-not-allowed select-none">Тарифы</span>
+                    <span className="text-muted-foreground/50 cursor-not-allowed select-none">{t("header.pricing")}</span>
                   </TooltipTrigger>
-                  <TooltipContent>Скоро</TooltipContent>
+                  <TooltipContent>{t("header.soon")}</TooltipContent>
                 </Tooltip>
               )}
             </nav>
 
             <div className="flex items-center gap-3">
+              <LanguageSwitcher />
               <Button variant="ghost" size="sm" asChild>
-                <a href={appHomeHref}>Войти</a>
+                <a href={appHomeHref}>{t("header.login")}</a>
               </Button>
               <Button size="sm" className="px-5" asChild>
                 <a href={startMeetingsHref} target={isExternalStart ? "_blank" : undefined} rel={isExternalStart ? "noreferrer" : undefined}>
-                  Начать
+                  {t("header.start")}
                 </a>
               </Button>
             </div>
@@ -159,12 +159,13 @@ export const Landing = () => {
 
           {/* Mobile кнопки */}
           <div className="md:hidden flex items-center gap-2">
+            <LanguageSwitcher />
             <Button variant="ghost" size="sm" className="h-9 px-3 text-sm" asChild>
-              <a href={appHomeHref}>Войти</a>
+              <a href={appHomeHref}>{t("header.login")}</a>
             </Button>
             <Button size="sm" className="h-9 px-4 text-sm" asChild>
               <a href={startMeetingsHref} target={isExternalStart ? "_blank" : undefined} rel={isExternalStart ? "noreferrer" : undefined}>
-                Начать
+                {t("header.start")}
               </a>
             </Button>
           </div>
@@ -182,28 +183,24 @@ export const Landing = () => {
             <div className="space-y-5 sm:space-y-6">
               {/* Заголовок */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.15] tracking-tight">
-                Случайные встречи с{" "}
-                <span className="text-primary">неслучайными людьми</span>
+                {t("hero.title_part1")} <span className="text-primary">{t("hero.title_part2")}</span>
               </h1>
 
               {/* Подзаголовок */}
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                <strong className="text-foreground font-semibold">Naura Meets</strong> — сервис для встреч внутри сообществ и по интересам.
-                <br className="hidden sm:block" />
-                <span className="sm:hidden"> </span>
-                Расширяй круг общения, находи своих, получай новые идеи через регулярные встречи с интересными людьми.
+                <Trans i18nKey="hero.subtitle" components={{ strong: <strong className="text-foreground font-semibold" />, br: <br className="hidden sm:block" /> }} />
               </p>
 
               {/* CTA-блок */}
               <div className="flex flex-col gap-4 pt-2">
                 <Button size="lg" className="text-base px-8 h-12 sm:h-14 w-full sm:w-auto" asChild>
                   <a href={startMeetingsHref} target={isExternalStart ? "_blank" : undefined} rel={isExternalStart ? "noreferrer" : undefined}>
-                    Начать встречи
+                    {t("hero.cta_button")}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </a>
                 </Button>
                 <a href="#for-communities" className="text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left">
-                  Подключить для сообщества →
+                  {t("hero.cta_community")}
                 </a>
               </div>
             </div>
@@ -227,12 +224,9 @@ export const Landing = () => {
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-muted/30 scroll-mt-16 sm:scroll-mt-20" id="for-participants">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">Как устроены встречи</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">{t("how_it_works.title")}</h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Naura meets — формат регулярных встреч с новыми людьми.
-              <br className="hidden sm:block" />
-              <span className="sm:hidden"> </span>
-              Каждую неделю ты решаешь, участвовать или пропустить. Если участвуешь — мы подбираем пару и даём контекст, чтобы разговор не начинался с нуля.
+              <Trans i18nKey="how_it_works.description" components={{ br: <br className="hidden sm:block" /> }} />
             </p>
           </div>
 
@@ -242,11 +236,11 @@ export const Landing = () => {
                 <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-4">
                   <FileText className="w-6 sm:w-7 h-6 sm:h-7 text-primary" />
                 </div>
-                <CardTitle className="text-lg sm:text-xl">Контекст до встречи</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">{t("how_it_works.card_context_title")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-sm sm:text-base leading-relaxed">
-                  Видишь анкету собеседника: чем занимается, что ищет, чем может помочь
+                  {t("how_it_works.card_context_desc")}
                 </CardDescription>
               </CardContent>
             </Card>
@@ -256,11 +250,11 @@ export const Landing = () => {
                 <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-4">
                   <Clock className="w-6 sm:w-7 h-6 sm:h-7 text-primary" />
                 </div>
-                <CardTitle className="text-lg sm:text-xl">Ритм без давления</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">{t("how_it_works.card_rhythm_title")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-sm sm:text-base leading-relaxed">
-                  Участвуешь когда удобно — пропускаешь раунд, если не готов
+                  {t("how_it_works.card_rhythm_desc")}
                 </CardDescription>
               </CardContent>
             </Card>
@@ -270,11 +264,11 @@ export const Landing = () => {
                 <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-4">
                   <ShieldCheck className="w-6 sm:w-7 h-6 sm:h-7 text-primary" />
                 </div>
-                <CardTitle className="text-lg sm:text-xl">Защита от пустых встреч</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">{t("how_it_works.card_protection_title")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-sm sm:text-base leading-relaxed">
-                  Если не связались — подберём новую пару. После встречи — фидбек, который учитываем дальше
+                  {t("how_it_works.card_protection_desc")}
                 </CardDescription>
               </CardContent>
             </Card>
@@ -286,26 +280,26 @@ export const Landing = () => {
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">Зачем встречаться?</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">{t("why_meet.title")}</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               {
-                title: "Выйти за пределы своего круга",
-                desc: "Познакомься с людьми, с которыми обычно не пересекаешься",
+                title: t("why_meet.card1_title"),
+                desc: t("why_meet.card1_desc"),
               },
               {
-                title: "Узнать, как другие решают похожие задачи",
-                desc: "Обменяйся опытом с теми, кто проходит через то же самое",
+                title: t("why_meet.card2_title"),
+                desc: t("why_meet.card2_desc"),
               },
               {
-                title: "Найти своих в новой среде",
-                desc: "Встреть людей из смежных сфер или с похожими интересами",
+                title: t("why_meet.card3_title"),
+                desc: t("why_meet.card3_desc"),
               },
               {
-                title: "Разговоры, которые что-то меняют",
-                desc: "Получи свежий взгляд, идеи и контакты, которые останутся после встречи",
+                title: t("why_meet.card4_title"),
+                desc: t("why_meet.card4_desc"),
               },
             ].map((item) => (
               <Card key={item.title} className="border bg-card/50 hover:bg-card hover:shadow-md transition-all duration-300">
@@ -325,29 +319,29 @@ export const Landing = () => {
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-muted/30">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">Как проходит неделя</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">{t("week_flow.title")}</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {[
               {
-                title: "Суббота: решаешь",
-                desc: "Получаешь приглашение на раунд — участвуешь или пропускаешь",
+                title: t("week_flow.step1_title"),
+                desc: t("week_flow.step1_desc"),
                 icon: CalendarDays,
               },
               {
-                title: "Понедельник: знакомишься",
-                desc: "Видишь анкету собеседника, пишешь в Telegram, договариваешься о встрече",
+                title: t("week_flow.step2_title"),
+                desc: t("week_flow.step2_desc"),
                 icon: Users,
               },
               {
-                title: "Среда: если нужно — меняем",
-                desc: "Не получилось связаться? Подберём новую пару на эту неделю",
+                title: t("week_flow.step3_title"),
+                desc: t("week_flow.step3_desc"),
                 icon: RefreshCcw,
               },
               {
-                title: "Суббота: делишься опытом",
-                desc: "Отмечаешь, состоялась ли встреча, оцениваешь — учитываем в следующих раундах",
+                title: t("week_flow.step4_title"),
+                desc: t("week_flow.step4_desc"),
                 icon: MessageCircle,
               },
             ].map((step, idx) => (
@@ -368,7 +362,7 @@ export const Landing = () => {
           <div className="pt-10 sm:pt-12 text-center">
             <Button size="lg" className="text-base px-8 sm:px-10 h-12 sm:h-14 w-full sm:w-auto" asChild>
               <a href={startMeetingsHref} target={isExternalStart ? "_blank" : undefined} rel={isExternalStart ? "noreferrer" : undefined}>
-                Попробовать
+                {t("week_flow.cta_button")}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </Button>
@@ -380,9 +374,9 @@ export const Landing = () => {
       <section id="for-communities" className="py-16 sm:py-24 px-4 sm:px-6 bg-background scroll-mt-16 sm:scroll-mt-20">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">Naura meets для вашего сообщества</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">{t("for_communities.title")}</h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Участники знакомятся, новички быстрее включаются, активность растёт вместе с ценностью комьюнити — без вашего участия.
+              {t("for_communities.description")}
             </p>
           </div>
 
@@ -391,11 +385,11 @@ export const Landing = () => {
               {/* Проблема */}
               <Card className="border-2">
                 <CardHeader className="pb-2 sm:pb-4">
-                  <CardTitle className="text-lg sm:text-xl">Проблема</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl">{t("for_communities.problem_title")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                    Участники приходят на события, но не знают друг друга. Новички теряются. Между встречами — тишина. Всё это съедает вовлечённость, и сообщество остаётся формальным.
+                    {t("for_communities.problem_desc")}
                   </p>
                 </CardContent>
               </Card>
@@ -403,13 +397,11 @@ export const Landing = () => {
               {/* Решение */}
               <Card className="border-2 border-primary/30 bg-primary/5">
                 <CardHeader className="pb-2 sm:pb-4">
-                  <CardTitle className="text-lg sm:text-xl">Решение</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl">{t("for_communities.solution_title")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                    Naura Meets запускает регулярные встречи 1-на-1 внутри вашего сообщества.
-                    <br />
-                    Люди знакомятся сами, вы получаете инструмент, который работает на автопилоте.
+                    <Trans i18nKey="for_communities.solution_desc" components={{ br: <br /> }} />
                   </p>
                 </CardContent>
               </Card>
@@ -418,18 +410,18 @@ export const Landing = () => {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                 {[
                   {
-                    title: "Вовлечение на автомате",
-                    desc: "Мэтчинг, уведомления, контроль встреч — всё работает без вас",
+                    title: t("for_communities.benefit1_title"),
+                    desc: t("for_communities.benefit1_desc"),
                     icon: Sparkles,
                   },
                   {
-                    title: "Понятная картина активности",
-                    desc: "Видите, кто участвует, сколько встреч состоялось, какой фидбек",
+                    title: t("for_communities.benefit2_title"),
+                    desc: t("for_communities.benefit2_desc"),
                     icon: CheckCircle2,
                   },
                   {
-                    title: "Настройка под сообщество",
-                    desc: "Формат встреч (онлайн/офлайн), частота раундов, доступ по группам",
+                    title: t("for_communities.benefit3_title"),
+                    desc: t("for_communities.benefit3_desc"),
                     icon: Users,
                   },
                 ].map((item) => (
@@ -451,55 +443,55 @@ export const Landing = () => {
             {/* Форма заявки */}
             <Card className="border-2">
               <CardHeader className="pb-2 sm:pb-4">
-                <CardTitle className="text-lg sm:text-xl">Оставить заявку</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">{t("for_communities.form_title")}</CardTitle>
                 <CardDescription className="text-sm">
-                  Заполни форму — мы ответим и поможем подключить встречи для вашего сообщества.
+                  {t("for_communities.form_desc")}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form className="space-y-4" onSubmit={handleLeadSubmit}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="lead-name" className="text-sm">Имя</Label>
+                      <Label htmlFor="lead-name" className="text-sm">{t("for_communities.label_name")}</Label>
                       <Input
                         id="lead-name"
                         value={leadForm.name}
                         onChange={(e) => setLeadForm((s) => ({ ...s, name: e.target.value }))}
-                        placeholder="Как к вам обращаться"
+                        placeholder={t("for_communities.placeholder_name")}
                         autoComplete="name"
                         className="h-11 sm:h-10 text-base sm:text-sm"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="lead-community" className="text-sm">Сообщество</Label>
+                      <Label htmlFor="lead-community" className="text-sm">{t("for_communities.label_community")}</Label>
                       <Input
                         id="lead-community"
                         value={leadForm.community}
                         onChange={(e) => setLeadForm((s) => ({ ...s, community: e.target.value }))}
-                        placeholder="Название / ссылка"
+                        placeholder={t("for_communities.placeholder_community")}
                         className="h-11 sm:h-10 text-base sm:text-sm"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="lead-contact" className="text-sm">Контакт</Label>
+                    <Label htmlFor="lead-contact" className="text-sm">{t("for_communities.label_contact")}</Label>
                     <Input
                       id="lead-contact"
                       value={leadForm.contact}
                       onChange={(e) => setLeadForm((s) => ({ ...s, contact: e.target.value }))}
-                      placeholder="Telegram / email / телефон"
+                      placeholder={t("for_communities.placeholder_contact")}
                       className="h-11 sm:h-10 text-base sm:text-sm"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="lead-comment" className="text-sm">Комментарий</Label>
+                    <Label htmlFor="lead-comment" className="text-sm">{t("for_communities.label_comment")}</Label>
                     <Textarea
                       id="lead-comment"
                       value={leadForm.comment}
                       onChange={(e) => setLeadForm((s) => ({ ...s, comment: e.target.value }))}
-                      placeholder="Коротко расскажите про формат и аудиторию"
+                      placeholder={t("for_communities.placeholder_comment")}
                       rows={3}
                       className="text-base sm:text-sm"
                     />
@@ -507,7 +499,7 @@ export const Landing = () => {
 
                   <div className="pt-2">
                     <Button type="submit" size="lg" className="w-full h-12 sm:h-11 text-base">
-                      Оставить заявку
+                      {t("for_communities.submit_button")}
                     </Button>
                   </div>
                 </form>
@@ -522,31 +514,31 @@ export const Landing = () => {
         <section id="pricing" className="py-16 sm:py-24 px-4 sm:px-6 bg-muted/30 scroll-mt-16 sm:scroll-mt-20">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-10 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">Тарифы</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">{t("pricing.title")}</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               <Card className="border-2">
                 <CardHeader>
-                  <CardTitle>Для участников</CardTitle>
+                  <CardTitle>{t("pricing.for_participants_title")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-muted-foreground text-sm sm:text-base">
-                    <li>Участие в общей базе Naura — бесплатно</li>
-                    <li>Встречи внутри сообществ — зависит от настроек сообщества</li>
+                    <li>{t("pricing.for_participants_item1")}</li>
+                    <li>{t("pricing.for_participants_item2")}</li>
                   </ul>
                 </CardContent>
               </Card>
               <Card className="border-2">
                 <CardHeader>
-                  <CardTitle>Для сообществ</CardTitle>
+                  <CardTitle>{t("pricing.for_communities_title")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-muted-foreground text-sm sm:text-base">
-                    <li>Стоимость зависит от размера</li>
-                    <li>Первый раунд — бесплатно</li>
+                    <li>{t("pricing.for_communities_item1")}</li>
+                    <li>{t("pricing.for_communities_item2")}</li>
                   </ul>
                   <a href="#for-communities" className="text-primary hover:underline text-sm mt-4 inline-block">
-                    Обсудить условия →
+                    {t("pricing.discuss_terms")}
                   </a>
                 </CardContent>
               </Card>
@@ -559,13 +551,13 @@ export const Landing = () => {
       <section className="py-16 sm:py-24 px-4 sm:px-6 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">Частые вопросы</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">{t("faq.title")}</h2>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
             {/* Для участников */}
             <div>
-              <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-base sm:text-lg">Для участников</h3>
+              <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-base sm:text-lg">{t("faq.participants_title")}</h3>
               <div className="space-y-3">
                 {faqParticipants.map((faq) => (
                   <Card
@@ -576,9 +568,8 @@ export const Landing = () => {
                     <CardHeader className="py-3 sm:py-4 flex flex-row items-center justify-between">
                       <CardTitle className="text-sm sm:text-base font-medium pr-4">{faq.question}</CardTitle>
                       <ChevronDown
-                        className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${
-                          openFaqId === faq.id ? "rotate-180" : ""
-                        }`}
+                        className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${openFaqId === faq.id ? "rotate-180" : ""
+                          }`}
                       />
                     </CardHeader>
                     {openFaqId === faq.id && (
@@ -593,7 +584,7 @@ export const Landing = () => {
 
             {/* Для владельцев */}
             <div>
-              <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-base sm:text-lg">Для владельцев</h3>
+              <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-base sm:text-lg">{t("faq.owners_title")}</h3>
               <div className="space-y-3">
                 {faqOwners.map((faq) => (
                   <Card
@@ -604,9 +595,8 @@ export const Landing = () => {
                     <CardHeader className="py-3 sm:py-4 flex flex-row items-center justify-between">
                       <CardTitle className="text-sm sm:text-base font-medium pr-4">{faq.question}</CardTitle>
                       <ChevronDown
-                        className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${
-                          openFaqId === faq.id ? "rotate-180" : ""
-                        }`}
+                        className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${openFaqId === faq.id ? "rotate-180" : ""
+                          }`}
                       />
                     </CardHeader>
                     {openFaqId === faq.id && (
@@ -630,27 +620,27 @@ export const Landing = () => {
             <div>
               <img src="/naura-logo.svg" alt="Naura Meets" className="h-7 sm:h-8 w-auto mb-3 sm:mb-4" />
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Сервис регулярных встреч 1-на-1
+                {t("footer.subtitle")}
               </p>
             </div>
 
             {/* Центральный блок: Ссылки + Контакты */}
             <div>
-              <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">Навигация</h4>
+              <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">{t("footer.nav_title")}</h4>
               <div className="space-y-2 text-sm mb-5 sm:mb-6">
                 <a href="#for-participants" className="block text-muted-foreground hover:text-foreground transition-colors">
-                  Для участников
+                  {t("header.for_participants")}
                 </a>
                 <a href="#for-communities" className="block text-muted-foreground hover:text-foreground transition-colors">
-                  Для сообществ
+                  {t("header.for_communities")}
                 </a>
                 {showPricing && (
                   <a href="#pricing" className="block text-muted-foreground hover:text-foreground transition-colors">
-                    Тарифы
+                    {t("header.pricing")}
                   </a>
                 )}
               </div>
-              <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">Контакты</h4>
+              <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">{t("footer.contacts_title")}</h4>
               <div className="space-y-2 text-sm">
                 <a href={`mailto:${CONFIG.SUPPORT_EMAIL}`} className="block text-muted-foreground hover:text-foreground transition-colors">
                   {CONFIG.SUPPORT_EMAIL}
@@ -663,11 +653,11 @@ export const Landing = () => {
 
             {/* Правый блок: Соцсети + Документы */}
             <div>
-              <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">Соцсети</h4>
+              <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">{t("footer.socials_title")}</h4>
               <div className="space-y-2 text-sm text-muted-foreground mb-5 sm:mb-6">
-                <span className="block">Скоро</span>
+                <span className="block">{t("header.soon")}</span>
               </div>
-              <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">Документы</h4>
+              <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">{t("footer.docs_title")}</h4>
               <div className="space-y-2 text-sm">
                 <a
                   href={CONFIG.LEGAL.PRIVACY_POLICY}
@@ -675,7 +665,7 @@ export const Landing = () => {
                   rel="noreferrer"
                   className="block text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Политика конфиденциальности
+                  {t("footer.privacy_policy")}
                 </a>
                 <a
                   href={CONFIG.LEGAL.TERMS_OF_SERVICE}
@@ -683,7 +673,7 @@ export const Landing = () => {
                   rel="noreferrer"
                   className="block text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Оферта
+                  {t("footer.terms")}
                 </a>
               </div>
             </div>
