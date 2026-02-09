@@ -1,0 +1,36 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#F8F9FA"/>
+  
+  <!-- Main Card -->
+  <rect x="100" y="100" width="600" height="400" rx="24" fill="white" stroke="#E2E8F0" stroke-width="2"/>
+  
+  <!-- Header -->
+  <text x="140" y="160" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#1A202C">На этой неделе</text>
+  <rect x="380" y="132" width="100" height="32" rx="16" fill="#DCFCE7"/>
+  <text x="430" y="154" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#166534" text-anchor="middle">Участвую</text>
+  
+  <!-- Subtitle -->
+  <text x="140" y="210" font-family="system-ui, sans-serif" font-size="18" fill="#4A5568">Вы участвуете в случайных встречах в</text>
+  <text x="140" y="235" font-family="system-ui, sans-serif" font-size="18" fill="#4A5568">сообществах:</text>
+  
+  <!-- List Items -->
+  <!-- Item 1 -->
+  <rect x="140" y="270" width="520" height="64" rx="16" fill="#F7FAFC"/>
+  <circle cx="172" cy="302" r="12" fill="#E2E8F0"/>
+  <text x="200" y="308" font-family="system-ui, sans-serif" font-size="18" fill="#2D3748">Naura Meet Community</text>
+  
+  <!-- Item 2 -->
+  <rect x="140" y="350" width="520" height="64" rx="16" fill="#F7FAFC"/>
+  <circle cx="172" cy="382" r="12" fill="#E2E8F0"/>
+  <text x="200" y="388" font-family="system-ui, sans-serif" font-size="18" fill="#2D3748">Product Managers Club</text>
+  
+  <!-- Item 3 -->
+  <rect x="140" y="430" width="520" height="64" rx="16" fill="#F7FAFC"/>
+  <circle cx="172" cy="462" r="12" fill="#E2E8F0"/>
+  <text x="200" y="468" font-family="system-ui, sans-serif" font-size="18" fill="#2D3748">Design Leaders</text>
+  
+  <!-- Footer Text -->
+  <text x="140" y="540" font-family="system-ui, sans-serif" font-size="16" fill="#718096">Вы получите по одному партнёру из каждого</text>
+  <text x="140" y="565" font-family="system-ui, sans-serif" font-size="16" fill="#718096">сообщества</text>
+</svg>

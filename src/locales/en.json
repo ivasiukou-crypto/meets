@@ -33,7 +33,11 @@
         "card3_title": "Find Your People in a New Environment",
         "card3_desc": "Meet people from adjacent fields or with similar interests",
         "card4_title": "Conversations That Change Something",
-        "card4_desc": "Get a fresh perspective, ideas, and contacts that remain after the meeting"
+        "card4_desc": "Get a fresh perspective, ideas, and contacts that remain after the meeting",
+        "bubble1": "Nice to meet you!",
+        "bubble2": "Let's solve this!",
+        "bubble3": "Oh, like-minded people!",
+        "bubble4": "Interesting thought!"
     },
     "week_flow": {
         "title": "How the Week Goes",

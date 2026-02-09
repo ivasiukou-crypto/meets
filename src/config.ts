@@ -13,6 +13,10 @@ export const CONFIG = {
   /** Telegram manager username for B2B inquiries */
   TELEGRAM_MANAGER: "@naura_meet_manager",
 
+  /** Telegram Bot Config */
+  TELEGRAM_BOT_TOKEN: "8556501504:AAHQR8DBafvtWNne16KK29uFIcDWGI_9caM",
+  TELEGRAM_ADMIN_CHAT_ID: "", // Вставьте сюда ваш Chat ID (число)
+
   /** Support email */
   SUPPORT_EMAIL: "support@naura.meet",
 
